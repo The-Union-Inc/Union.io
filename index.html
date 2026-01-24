@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Union Incorporated</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #2f3336, #3a3f43, #4a4f53);
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.45);
+      overflow-x: hidden;
+    }header {
+  padding: 50px 20px;
+  text-align: center;
+  background: rgba(40, 40, 40, 0.8);
+}
+
+header img {
+  max-width:180px;
+  margin-bottom:20px;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(255,255,255,0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(50, 50, 50, 0.9);
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px rgba(255,255,255,0.2); }
+  50% { box-shadow: 0 0 25px rgba(255,255,255,0.5); }
+  100% { box-shadow: 0 0 10px rgba(255,255,255,0.2); }
+}
+
+.hub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.hub-card {
+  width: 300px;
+  border-radius: 18px;
+  padding: 28px;
+  cursor: pointer;
+  animation: glowPulse 3s infinite ease-in-out;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(255,255,255,0.7);
+  user-select: all;
+}
+
+.hub-card:hover {
+  transform: translateY(-4px);
+}
+
+.hub-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+}
+
+.hub-sub {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.redz {
+  background: rgba(180, 40, 40, 0.25);
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.5);
+}
+
+.gravity {
+  background: rgba(120, 60, 200, 0.25);
+  box-shadow: 0 0 20px rgba(170, 100, 255, 0.5);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+#copied-msg {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.1);
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 12px rgba(255,255,255,0.8);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.more-scripts {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
+  100% { transform: translateY(-600px) translateX(50px); opacity: 0; }
+}
+
+.script-box {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  height: 80px;
+  background: rgba(0,0,0,0.35);
+  color: #ffffff;
+  font-family: monospace;
+  text-shadow: none;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 6px 14px;
+  cursor: pointer;
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.logo-stack {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-stack img {
+  max-width: 220px;
+  opacity: 0.85;
+}
+
+.logo-stack h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.8rem;
+  margin: 0;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 0 0 22px rgba(255,255,255,0.85);
+}
+
+.discord-link {
+  display: inline-block;
+  margin-top: 18px;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.discord-link:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 16px rgba(255,255,255,0.9));
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="logo-stack">
+      <img src="logo.png" alt="The Union Incorporated Logo" />
+      <h1>The Union Incorporated</h1>
+    </div>
+    <a class="discord-link" href="https://discord.gg/Fv85Vp5jcc" target="_blank" aria-label="Join our Discord" style="display:flex;align-items:center;gap:6px;font-size:0.9rem;text-decoration:none;color:white;">
+  <svg width="18" height="18" viewBox="0 0 245 240" fill="white" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 6px rgba(255,255,255,0.6));">
+    <path d="M104.4 104.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.3-5 10.2-11.1 0-6.1-4.5-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.3-5 10.2-11.1 0-6.1-4.5-11.1-10.2-11.1z"/>
+    <path d="M189.5 20h-134C24.9 20 20 24.9 20 30.5v179c0 5.6 4.9 10.5 10.5 10.5h113l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V30.5c0-5.6-4.9-10.5-10.6-10.5zm-39.7 130s-3.7-4.4-6.8-8.3c13.5-3.8 18.7-12.3 18.7-12.3-4.2 2.8-8.2 4.8-11.8 6.1-5.1 2.1-10 3.5-14.8 4.3-9.8 1.8-18.8 1.3-26.5-0.1-5.8-1.1-10.8-2.6-15-4.3-2.4-0.9-5-2-7.6-3.4l-0.9-0.5-0.5-0.3c-2.2-1.2-3.4-2-3.4-2s5 8.3 18.3 12.2c-3.1 3.9-6.9 8.6-6.9 8.6-22.8-0.7-31.4-15.7-31.4-15.7 0-33.2 14.8-60.2 14.8-60.2 14.8-11.1 28.9-10.8 28.9-10.8l1 1.2c-18.5 5.3-27 13.3-27 13.3s2.3-1.3 6.1-3.1c11-4.8 19.8-6.1 23.4-6.4l1.7-0.2c6.1-0.8 13-1 20.2-0.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-8.1-7.7-25.6-13l1.4-1.6s14.1-0.3 28.9 10.8c0 0 14.8 27 14.8 60.2 0 0-8.7 15-31.5 15.7z"/>
+  </svg>
+  <span style="text-shadow:0 0 10px rgba(255,255,255,0.7);">Join our Discord</span>
+</a>
+  </header>  <main>
+    <h2>Our Promoted Scripts</h2><div class="hub-container">
+  <!-- Redz Hub -->
+  <div class="hub-card redz">
+    <div class="hub-title">Redz Hub</div>
+    <div class="hub-sub">Click copy or manually select</div>
+    <button class="copy-btn" onclick="copyFromBox('redzScript')">Copy</button>
+    <textarea id="redzScript" class="script-box" readonly onclick="this.select();">loadstring(game:HttpGet("https://raw.githubusercontent.com/Official-Redz-Hub/Script/refs/heads/main/Main.lua"))()</textarea>
+  </div>
+
+  <!-- Gravity Hub -->
+  <div class="hub-card gravity">
+    <div class="hub-title">Gravity Hub</div>
+    <div class="hub-sub">Click copy or manually select</div>
+    <button class="copy-btn" onclick="copyFromBox('gravityScript')">Copy</button>
+    <textarea id="gravityScript" class="script-box" readonly onclick="this.select();">loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-Gravity-Hub/BloxFruit/refs/heads/main/Main.lua"))()</textarea>
+  </div>
+
+  <div class="more-scripts">more scripts coming soon...</div>
+</div>
+
+  </main>  <div id="copied-msg">Copied!</div>  <footer>
+    <p>© 2026 The Union Incorporated. All rights reserved.</p>
+  </footer>  <script>
+    function copyFromBox(id) {
+      const box = document.getElementById(id);
+      box.focus();
+      box.select();
+      box.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        showCopied();
+      } catch (e) {
+        alert('Copy failed');
+      }
+    }
+
+    function showCopied() {
+      const msg = document.getElementById('copied-msg');
+      msg.style.opacity = '1';
+      setTimeout(() => { msg.style.opacity = '0'; }, 1500);
+    }
+
+    for(let i=0;i<40;i++){
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random()*window.innerWidth+'px';
+      p.style.top = Math.random()*window.innerHeight+'px';
+      p.style.animationDuration = (3+Math.random()*3)+'s';
+      document.body.appendChild(p);
+    }
+  </script></body>
+</html>
